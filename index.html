@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivid Vault — Image Gallery</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="brand-title">Vivid Vault</h1>
+    <p class="tagline">Explore thousands of high-res images instantly.</p>
+    
+    <form id="search-form">
+      <label for="search-input" class="sr-only" style="display:none;">Search images</label>
+      <input 
+        type="search" 
+        id="search-input" 
+        placeholder="Search topics (e.g. Cyberpunk,fi Forests...)" 
+        aria-label="Search images"
+      />
+      <button type="submit" id="search-btn">Search</button>
+    </form>
+    <div class="chip-container">
+      <button class="chip">Nature</button>
+      <button class="chip">Architecture</button>
+      <button class="chip">Technology</button>
+      <button class="chip">Abstract</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="empty-state">
+      <h2>Your vault is currently empty</h2>
+      <p>Enter a keyword above or select a quick pick to populate the grid.</p>
+    </div>
+    <section id="results-grid" aria-live="polite"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
